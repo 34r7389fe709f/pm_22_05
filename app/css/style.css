@@ -1,0 +1,185 @@
+body {
+  background-color: #FAFBFC;
+}
+
+.cards {
+  background-color: white;
+}
+
+.bi {
+  color: #55C6EA;
+}
+
+.bi-three-dots-vertical {
+  color: #787D83;
+}
+
+.t1 {
+  color: #55C6EA;
+}
+
+.t2 {
+  color: #787D83;
+}
+
+.t3 {
+  color: #B6BCC8;
+}
+
+.nv1 {
+  width: min-content !important;
+}
+
+.nv2 {
+  color: #B6BCC8;
+}
+
+.nv3 {
+  color: #B6BCC8;
+}
+
+.arrow {
+  color: #787D83;
+}
+
+.progress {
+  height: 5px;
+  padding: 0;
+  margin: 0;
+}
+
+.circle-wrap {
+  margin: 8px auto;
+  margin-bottom: 20px;
+  width: 60px;
+  height: 60px;
+  background: #55C6EA;
+  border-radius: 50%;
+  border: 1px solid #cdcbd0;
+}
+
+.circle-wrap .inside-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: White;
+  line-height: 10px;
+  margin-top: 4px;
+  margin-left: -8px;
+  text-align: center;
+  color: White;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.form-range {
+  height: 5px;
+}
+
+.dropdownlist {
+  height: 25px;
+  background-color: white;
+  width: 100%;
+  border-radius: 15px;
+  border-width: 3px;
+  border-color: #55C6EA;
+}
+
+.form-check-input {
+  height: 20px;
+  width: 40px !important;
+  float: right !important;
+}
+
+.dropdownlist1 {
+  height: 25px;
+  background-color: white;
+  width: 120px;
+  border-radius: 15px;
+  border-width: 3px;
+  border-color: #55C6EA;
+  float: right !important;
+}
+
+.c1 {
+  height: 20px;
+  width: 20px;
+  background-color: #E4F6FB;
+  border-radius: 100%;
+  position: relative;
+}
+
+.c2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -5px 0px 0px -5px;
+  height: 10px;
+  width: 10px;
+  background-color: #55C6EA;
+  border-radius: 100%;
+}
+
+.c3 {
+  height: 20px;
+  width: 20px;
+  background-color: #E4F8F4;
+  border-radius: 100%;
+  position: relative;
+}
+
+.c4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -5px 0px 0px -5px;
+  height: 10px;
+  width: 10px;
+  background-color: #4ACEB7;
+  border-radius: 100%;
+}
+
+.cc1 {
+  height: 100px;
+  width: 100px;
+  background-color: #55C6EA;
+  border-radius: 100%;
+  position: relative;
+}
+
+.cc2 {
+  position: absolute;
+  height: 85px;
+  width: 85px;
+  background-color: white;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  margin: -42.5px 0px 0px -42.5px;
+}
+
+.cc3 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: #E4F6FB;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0px 0px -25px;
+}
+
+.cc4 {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #55C6EA;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  margin: -20px 0px 0px -20px;
+}
+
+/*# sourceMappingURL=style.css.map */

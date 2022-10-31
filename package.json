@@ -8,15 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/34r7389fe709f/pm_22_05.git"
+    "url": "git+https://github.com/d4-5/pm_22_05.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/34r7389fe709f/pm_22_05/issues"
+    "url": "https://github.com/d4-5/pm_22_05/issues"
   },
-  "homepage": "https://github.com/34r7389fe709f/pm_22_05#readme",
+  "homepage": "https://github.com/d4-5/pm_22_05#readme",
   "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "chart.js": "^3.9.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-concat": "^2.6.1",
@@ -26,5 +28,10 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "sass": "^1.54.5"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.1",
+    "bootstrap-icons": "^1.9.1",
+    "jquery": "^3.6.1"
   }
 }

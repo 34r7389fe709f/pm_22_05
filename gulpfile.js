@@ -1,3 +1,4 @@
+const bs = require('browser-sync').create();
 const {src, dest, watch, series} = require("gulp");
 const concat = require("gulp-concat");
 const sass = require('gulp-sass')(require('sass'));
@@ -7,6 +8,32 @@ const rename = require("gulp-rename");
 const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
 
+async function browserSync() {
+    serveSass();
+
+    bs.init({
+        port: 8080,
+        server: {
+            baseDir: 'app',
+        },
+    });
+
+
+    watch('app/*.html').on('change', bs.reload);
+    watch('app/scss/*.scss', serveSass);
+    watch('app/js/*.js').on('change', bs.reload);
+}
+
+exports.server = browserSync
+
+function serveSass() {
+
+    return src('app/sass/*.scss')
+        .pipe(sass())
+        .pipe(dest('app/css'))
+            .pipe(bs.stream());
+}
+
 function task_html(){
     return src("app/*.html")
         .pipe(dest("dist"));
@@ -14,8 +41,8 @@ function task_html(){
 exports.html = task_html
 
 function task_sass(){
-    return src ("app/sass/*.sass")
-        .pipe(concat('styles.sass'))
+    return src ("app/sass/*.scss")
+        .pipe(concat('styles.scss'))
         .pipe(sass())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
@@ -50,10 +77,19 @@ exports.imgs = task_imgs
 function task_watch(){
     watch("app/*.html", task_html);
     watch("app/js/*.js", task_scripts);
-    watch("app/sass/*.sass", task_sass);
+    watch("app/sass/*.scss", task_sass);
     watch("app/images/*.+(jpg|jpeg|png|gif)", task_imgs)
 }
 exports.watch = task_watch
 
-exports.build = series(task_html, task_sass, task_scripts, task_imgs, task_watch)
+function task_server(){
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+    gulp.watch("*.html").on("change", reload);
+}
+
+exports.build = series(browserSync, task_html, task_sass, task_scripts, task_imgs, task_watch)
 
