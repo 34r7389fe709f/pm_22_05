@@ -1,4 +1,3 @@
-
 $BlueColor:#55C6EA;
 $LightBlueColor:#E4F6FB;
 $GreyColor:#787D83;
@@ -150,44 +149,21 @@ body{
   border-radius: 100%;
 }
 
-.cc1{
-  height: 100px;
-  width: 100px;
-  background-color: $BlueColor;
-  border-radius: 100%;
-  position:relative;
-}
-
-.cc2{
-  position: absolute;
-  height: 85px;
-  width: 85px;
-  background-color: white;
-  border-radius: 100%;
-  top: 50%;
-  left: 50%;
-  margin: -42.5px 0px 0px -42.5px;
-}
-
 .cc3{
   position: absolute;
   height: 50px;
   width: 50px;
   background-color: $LightBlueColor;
   border-radius: 100%;
-  top: 50%;
-  left: 50%;
-  margin: -25px 0px 0px -25px;
+  top:95.8%;
+  left:60.3%;
 }
 
 .cc4{
-  position: absolute;
   height: 40px;
   width: 40px;
   background-color: $BlueColor;
   border-radius: 100%;
-  top: 50%;
-  left: 50%;
-  margin: -20px 0px 0px -20px;
+  margin-top: 5px;
+  margin-left: 5px;
 }
-
