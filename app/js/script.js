@@ -2,20 +2,19 @@ Chart.defaults.font.size = 14;
 Chart.defaults.color = "#787D83";
 Chart.defaults.borderColor = "#E4F6FB";
 
+ 
   const data1 = {
     datasets: [{
       fill:'origin',  
       backgroundColor: '#b2edfd',
       borderColor: '#55C6EA',
       order:0,
-      data: [0, 10, 5, 2, 20, 30, 45,100,200,150,300,100],
     },
     {
         fill:'origin',  
         backgroundColor: '#E4F8F4',
         borderColor: '#4ACEB7',
         order:1,
-        data: [200,200,400,100,200,300,100,200,350,400,150,200],
       }],
   };
 
@@ -52,14 +51,12 @@ Chart.defaults.borderColor = "#E4F6FB";
       backgroundColor: '#b2edfd',
       borderColor: '#55C6EA',
       order:0,
-      data: [0, 10, 5, 2, 20, 30, 45,100,200,150,300,100],
     },
     {
         fill:'origin',  
         backgroundColor: '#E4F8F4',
         borderColor: '#4ACEB7',
         order:1,
-        data: [200,200,400,100,200,300,100,200,350,400,150,200],
       }],
   };
 
@@ -90,7 +87,6 @@ Chart.defaults.borderColor = "#E4F6FB";
 
   const data3 = {
     datasets: [{
-      data: [150,250],
       backgroundColor: [
         '#55C6EA',
         '#E4F6FB',
@@ -106,7 +102,6 @@ Chart.defaults.borderColor = "#E4F6FB";
 
   const data4 = {
     datasets: [{
-      data: [150,250],
       backgroundColor: [
         '#55C6EA',
         '#E4F6FB',
@@ -120,3 +115,41 @@ Chart.defaults.borderColor = "#E4F6FB";
     type: 'doughnut',
     data: data4,
   };
+
+  $.ajax('data.json',{
+    dataType: 'json',
+    async: true,
+    success: function(data, status, xhr) {
+      data1.datasets[0].data = data.graphs[0];
+      data1.datasets[1].data = data.graphs[1];
+      data2.datasets[0].data = data.graphs[2];
+      data2.datasets[1].data = data.graphs[3];
+      data3.datasets[0].data = data.graphs[4];
+      data4.datasets[0].data = data.graphs[5];
+
+      $("#progress-bar").width(data.graphs[6].toString() + "%")
+      
+
+  const myChart1 = new Chart(
+    document.getElementById('myChart1'),
+    config1
+  );
+
+  const myChart2 = new Chart(
+    document.getElementById('myChart2'),
+    config2
+  );
+
+  const myChart3 = new Chart(
+    document.getElementById('myChart3'),
+    config3
+  );
+
+  const myChart4 = new Chart(
+    document.getElementById('myChart4'),
+    config4
+  );
+
+}
+});
+

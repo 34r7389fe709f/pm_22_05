@@ -59,7 +59,7 @@ function task_scripts(){
         .pipe(concat('scripts.js'))
         .pipe(uglify())
         .pipe(rename({suffix:'.min'}))
-        .pipe(dest("dest/js"))
+        .pipe(dest("dist/js"))
 }
 exports.scrpits = task_scripts()
 
